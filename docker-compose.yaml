@@ -4,17 +4,17 @@ volumes:
   mongodb_volume:
 
 services:
-  Flask:
+  flask:
     build: Flask/
     restart: always
     ports:
       - 80:8080
     environment:
       - TZ=Europe/Moscow
-      - MONGO_DB_ADDR=MongoDB
+      - MONGO_DB_ADDR=mongodb
       - MONGO_DB_PORT=27017
 
-  MongoDB:
+  mongodb:
     image: mongo:latest
     volumes:
       - mongodb_volume:/data/db
