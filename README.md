@@ -1,5 +1,6 @@
 # Docker
 
+```
 docker images
 docker ps
 docker ps -a
@@ -38,3 +39,4 @@ cd Flask/
 docker build -t kostiushenko/flask .
 docker login
 docker push kostiushenko/flask
+```
